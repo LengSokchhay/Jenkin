@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vastevenson/pytest-intro-vs.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: 'python']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/LengSokchhay/Jenkin.git']]])
             }
         }
         stage('Build') {
             steps {
-                git branch: 'main', url: 'https://github.com/vastevenson/pytest-intro-vs.git'
-                sh 'python3 ops.py'
+                git branch: 'python', url: 'https://github.com/LengSokchhay/Jenkin.git'
+                sh 'python3 my_module.py'
             }
         }
         stage('Test') {
