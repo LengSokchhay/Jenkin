@@ -16,7 +16,7 @@ pipeline {
         stage('Build App') {
             steps {
                 echo 'Building...'
-                sh "gradle clean build"
+                sh "gradle build"
             }
         }
         stage('Testing App') {
