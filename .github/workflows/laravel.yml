@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Checkout TP2 branch
-      run: git fetch && git checkout tp2
+      run: git fetch && git checkout TP2
     - name: Setup PHP
       uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
